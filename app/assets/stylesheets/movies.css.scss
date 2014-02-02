@@ -1,0 +1,34 @@
+// Place all the styles related to the movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+@import "bootstrap/theme";
+
+li {
+}
+
+#movie {
+	background-color: $gray-lighter;
+	
+}
+
+#movie-number, #movie-name{
+	float: none;  
+	display: table-cell;
+}
+
+#movie-number {
+	border-right: 2px solid $gray;
+	padding-right: 40px;
+	vertical-align: middle;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+		color: darkBlue;
+	}
+
+}

@@ -1,0 +1,7 @@
+.col-xs-8.col-xs-offset-2
+	= form_tag("/results", method: "get") do |f|
+
+		= label_tag(:title, 'Movie Title:')
+		= text_field_tag :title
+
+		= submit_tag 'Find!', class: "btn btn-latge btn-primary"
