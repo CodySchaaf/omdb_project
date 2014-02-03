@@ -6,7 +6,20 @@
 
 @import "bootstrap/theme";
 
+h1 {
+	font-size: 3em;
+	text-align: center;
+	letter-spacing: -2px;
+	line-height: 1;
+}
+
 li {
+}
+
+div#home {
+	margin-top: 5em;
+	margin-bottom: 5em;
+	height: 100%;
 }
 
 #movie {
@@ -31,4 +44,28 @@ a {
 		color: darkBlue;
 	}
 
+}
+
+body {
+	text-align: center;
+	height: 100%;
+
+}
+
+body > * {
+	text-align: left;
+
+}
+
+form#home-page {
+	margin-top: 2em;
+	text-align: center;
+	input#small-btn {
+		margin-top: .25em;
+		text-align: center;
+	}
+}
+
+div#search-form {
+	margin-left: .25em;
 }

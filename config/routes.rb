@@ -1,4 +1,5 @@
 OmdbProject::Application.routes.draw do
+  get "users/new"
   resources :movies
 
   root 'movies#home'

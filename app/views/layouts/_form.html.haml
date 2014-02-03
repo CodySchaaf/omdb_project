@@ -1,5 +1,5 @@
 = form_tag("/results", method: "get", class: 'navbar-form navbar-left', role: 'search') do |f|
 		.form-group 
-		= text_field_tag class: 'form-control', placeholder: 'Search'
+		= text_field_tag :title
 
-		= submit_tag 'Submit', class: "btn btndefault"
+		= submit_tag 'Submit', class: "btn btn-default"

@@ -16,8 +16,12 @@
 
 @import "bootstrap/theme";
 
-html, body {
+
+html{
   height: 100%;
+}
+body {
+  min-height: 100%;
 }
 
 #wrap {
@@ -36,7 +40,7 @@ html, body {
 
 .footer {
   position: relative;
-  margin-top: -150px; /* negative value of footer height */
+  margin-top: -250px; /* negative value of footer height */
   height: 150px;
   clear:both;
   padding-top:20px;

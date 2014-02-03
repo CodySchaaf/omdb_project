@@ -1,7 +1,9 @@
-.col-xs-8.col-xs-offset-2
-	= form_tag("/results", method: "get") do |f|
+.col-xs-6.col-xs-offset-3#home
+	%h1
+		%b Movies Go Here:
+	= form_tag("/results", method: "get", id: 'home-page') do |f|
+		.col-m-offset-2
 
-		= label_tag(:title, 'Movie Title:')
-		= text_field_tag :title
-
-		= submit_tag 'Find!', class: "btn btn-latge btn-primary"
+			= submit_tag 'Find!', class: "btn btn-latge btn-primary hidden-xs", id: 'big-btn'
+			= text_field_tag :title
+			= submit_tag 'Find!', class: "btn btn-latge btn-primary visible-xs col-xs-offset-4 ", id: 'small-btn'

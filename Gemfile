@@ -39,9 +39,12 @@ group :doc do
 end
 
 gem 'bootstrap-sass', '~> 3.1.0'
+group :development do
+  gem 'rails_layout'
+end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -50,4 +53,4 @@ gem 'bootstrap-sass', '~> 3.1.0'
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
