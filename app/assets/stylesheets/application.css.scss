@@ -16,32 +16,33 @@
 
 @import "bootstrap/theme";
 
-
-html{
-  height: 100%;
-}
 body {
   min-height: 100%;
 }
 
 #wrap {
   min-height: 100%;
+  margin-bottom: 50em;
+
 }
 
 #main {
-  overflow:auto;
-  padding-bottom:150px;
   padding-top:100px;
-
+  min-height: 100%;
 }
 
 
 /* Footer */
 
 .footer {
-  position: relative;
-  margin-top: -250px; /* negative value of footer height */
-  height: 150px;
-  clear:both;
-  padding-top:20px;
+  padding-top: 5px;
+  border-top: 1px solid $gray;
+  float: left;
+  color: $gray-light;
+  clear: both;
 } 
+
+.navbar-brand#welcome-message {
+  // float: right;
+
+}

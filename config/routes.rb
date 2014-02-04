@@ -1,8 +1,13 @@
 OmdbProject::Application.routes.draw do
-  get "users/new"
-  resources :movies
+  get "movies/new"
+  get "favorites/new"
+  resources :searches
+  resources :users
+  resources :sessions
 
-  root 'movies#home'
+  root 'searches#home'
 
-  match '/results', to: 'movies#results',						via: 'get'
+  match '/results', to: 'searches#results',					via: 'get'
+  match '/signup', 	to: 'users#new', 								via: 'get'
+  match '/signin',  to: 'sessions#new',             via: 'get'
 end

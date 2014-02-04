@@ -1,0 +1,99 @@
+// Place all the styles related to the movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+@import "bootstrap/theme";
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+	letter-spacing: -2px;
+	line-height: 1;
+}
+
+li {
+}
+
+div#home {
+	margin-top: 5em;
+	margin-bottom: 5em;
+	height: 100%;
+}
+
+#movie {
+	background-color: $gray-lighter;
+	
+}
+
+#movie-number, #movie-name{
+	float: none;  
+	display: table-cell;
+}
+
+#movie-number {
+	border-right: 2px solid $gray;
+	padding-right: auto;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	// padding-bottom: 10px;
+	vertical-align: middle;
+	float: left;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+		color: darkBlue;
+	}
+}
+
+#movie-name {
+	/* essential */
+	text-overflow: ellipsis;
+	// width: 60%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	/* for good looks */
+	margin-left: auto;
+	margin-right: auto;
+	padding-right:auto;
+	padding-left: auto;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+a#glyph-link {
+	float: right;
+	// clear: right;
+	vertical-align: middle;
+	margin-top: 7px;
+}
+
+body {
+	text-align: center;
+	height: 100%;
+
+}
+
+body > * {
+	text-align: left;
+
+}
+
+form#home-page {
+	margin-top: 2em;
+	text-align: center;
+	input#small-btn {
+		margin-top: .25em;
+		text-align: center;
+	}
+}
+
+div#search-form {
+	margin-left: .25em;
+}

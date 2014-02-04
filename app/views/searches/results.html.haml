@@ -1,0 +1,10 @@
+%ul.list-group
+	- @json.each_with_index do |element, index|
+		- index += 1
+		%li.list-group-item#movie
+			.col-xs-1.col-xs-pull-1.col-sm-pull-0.text-center#movie-number
+				= "#{index}"
+			.text-center#movie-name
+				= render 'link', element: element
+			%a{:href => "#", remote: true, class: 'col-xs-1', id: 'glyph-link'} 
+				%b.glyphicon.glyphicon-plus-sign
