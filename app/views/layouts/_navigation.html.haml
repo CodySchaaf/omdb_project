@@ -1,5 +1,5 @@
 %nav.navbar.navbar-inverse.navbar-fixed-top{role: 'navigation'}
-  .container
+  .container#nav-bar-container
     .navbar-header
       %button.navbar-toggle{ type: 'button', 'data-toggle' => 'collapse', 'data-target' => '.navbar-collapse'}
         %span.sr-only 'Toggle navigation'
@@ -7,7 +7,9 @@
           %span.icon-bar 
       = link_to 'Home', root_path, class: 'navbar-brand'
       .col-xs-offset-5
-        %a{href: "#", class: 'visible-xs navbar-brand'} Welcome Cody
+        - if signed_in?
+          %a{href: "#", class: 'visible-xs navbar-brand'} 
+            = "Welcome #{@current_user.user_name}"
 
     .collapse.navbar-collapse.navbar-collapse
       %ul.nav.navbar-nav 
@@ -30,8 +32,10 @@
             %li.divider
             %li 
               = render 'sessions/signin_form'
-        %li.hidden-xs.col-xs-push-6
-          %a{href: "#"} Welcome Cody
+        %li.hidden-xs.col-xs-push-2.col-md-push-6.col-lg-push-9.navbar-brand#welcome-message
+          - if signed_in?
+            %a{href: "#"} 
+              = "Welcome #{@current_user.user_name}"
 
       .nav.navbar-nav.navbar-right#search-form.col-sm-push-6
         = render 'layouts/form'
