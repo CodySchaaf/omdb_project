@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-	has_many :favorites, dependent: :destroy
+	has_many :favorites, foreign_key: 'favoriter_id', dependent: :destroy
+	has_many :favorited_movies, through: :favorites, source: :favorited
+
 
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
@@ -20,6 +22,18 @@ class User < ActiveRecord::Base
 		Digest::SHA1.hexdigest(token.to_s)
 	end
 
+	def favorite?(movie)
+		favorites.find_by(favorited_id: movie.id)
+	end
+
+	def favorite!(movie)
+		favorites.create!(favorited_id: movie.id)
+	end
+
+	def unfavorite!(movie)
+		favorites.find_by(favorited_id: movie.id).destroy
+	end
+	
 	private
 
 		def create_remember_token

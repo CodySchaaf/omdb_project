@@ -1,0 +1,11 @@
+- if signed_in?
+	%div.col-xs-1#favorite-form
+		- if current_user.favorite?(movie)
+			= puts movie
+			= render 'favorites/unfavorite', movie: movie
+		- else 
+			= puts "#{movie}: hi"
+			= render 'favorites/favorite', movie: movie
+- else 
+	%div.col-xs-1#favorite-form
+		= render 'favorites/favorite_not_signed_in', movie: movie

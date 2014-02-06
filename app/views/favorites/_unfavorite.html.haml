@@ -1,0 +1,3 @@
+= form_for(current_user.favorites.find_by(favorited_id: movie.id), html: {method: :delete}, remote: true) do |fav|
+	= #%b.glyphicon.glyphicon-ok-circle
+	= fav.submit nil

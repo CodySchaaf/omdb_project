@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203063622) do
+ActiveRecord::Schema.define(version: 20140206061924) do
 
   create_table "favorites", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "movie_id"
+    t.integer  "favoriter_id"
+    t.integer  "favorited_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "favorites", ["movie_id"], name: "index_favorites_on_movie_id"
-  add_index "favorites", ["user_id", "movie_id"], name: "index_favorites_on_user_id_and_movie_id", unique: true
-  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
+  add_index "favorites", ["favorited_id"], name: "index_favorites_on_favorited_id"
+  add_index "favorites", ["favoriter_id", "favorited_id"], name: "index_favorites_on_favoriter_id_and_favorited_id", unique: true
+  add_index "favorites", ["favoriter_id"], name: "index_favorites_on_favoriter_id"
 
   create_table "movies", force: true do |t|
     t.string   "json"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20140203063622) do
     t.integer  "year"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imdb_id"
+    t.string   "result_type"
   end
 
   add_index "movies", ["json"], name: "index_movies_on_json"

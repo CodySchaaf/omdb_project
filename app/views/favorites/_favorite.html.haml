@@ -1,0 +1,5 @@
+= form_for(current_user.favorites.build(favorited_id: movie.id), remote: true) do |fav|
+	%div 
+		= fav.hidden_field :favorited_id
+	-# %b.glyphicon.glyphicon-plus-sign
+	= fav.submit #, style: 'display: none;'
