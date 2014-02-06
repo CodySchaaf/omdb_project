@@ -52,12 +52,6 @@ li#user-info {
   float: none;
 }
 
-li#user-page {
-  // width: auto;
-  display: inline-block;
-  float: none;
-}
-
 li#welcome-message {
   margin-top: -15px;
   margin-left: -2em;
@@ -81,14 +75,11 @@ div#welcome-message {
   }
 }
 
-form.navbar-form {
-}
-
 #nav-search {
-  height: 1.5em;
-  margin-top: 5px;
+  height: -1.5em;
+  margin-top: 2.5px;
   // margin-right: 2em;
-  padding: -5px;
+  padding: -10px;
 
 }
 
