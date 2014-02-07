@@ -1,4 +1,15 @@
 = form_for(current_user.favorites.find_by(favorited_id: movie.id), html: {method: :delete}, remote: true) do |fav|
 	= hidden_field_tag :index, index
-	%b.glyphicon.glyphicon-ok-circle
-		= fav.submit nil, style: 'visibility: hidden;'
+	= link_to_submit( class: 'form-submitter' ) do 
+		%b.glyphicon.glyphicon-ok-circle#circle-glyph
+
+
+:javascript
+	$(function() {
+	  $(".glyphicon-ok-circle").hover(function() {
+	    return $(this).toggleClass("glyphicon-ok-circle");
+	  });
+	  return $(".glyphicon-ok-circle").hover(function() {
+	    return $(this).toggleClass("glyphicon-remove-circle");
+	  });
+	});
