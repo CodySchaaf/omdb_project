@@ -1,11 +1,9 @@
 %ul.list-group
-	= puts "Lets make some movies"
 	- @movies.each_with_index do |movie, index|
-		= puts "This is a movie: #{movie}"
 		- index += 1
 		%li.list-group-item#movie
 			.col-xs-1.col-xs-pull-1.col-sm-pull-0.text-center#movie-number
 				= "#{index}"
 			.text-center.col-xs-offset-1#movie-name
 				= render 'link', element: movie
-			= render 'glyph_form', movie: movie
+			= render 'glyph_form', movie: movie, index: index

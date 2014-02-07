@@ -65,11 +65,15 @@ a {
 	padding-bottom: 5px;
 }
 
-a#favorite-form {
+div[id*='favorite-form'] {
+	opacity: 1.0;
 	float: right;
 	// clear: right;
 	vertical-align: middle;
 	margin-top: 7px;
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
 body {

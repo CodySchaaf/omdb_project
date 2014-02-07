@@ -1,1 +1,1 @@
-$('#favorite-form').html("<%= escape_javascript(render('favorites/favorite')) %>")
+$('#favorite-form' + "<%= @index %>").html("<%= escape_javascript(render(partial: 'favorites/favorite', locals: { movie: @movie, index: @index })) %>");
