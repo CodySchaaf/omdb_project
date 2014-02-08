@@ -1,9 +1,9 @@
 - if signed_in?
-	%div.col-xs-1{ id: "favorite-form#{index}"}
+	%div.col-xs-1.favorite-form{ id: "favorite-form#{index}"}
 		- if current_user.favorite?(movie)
 			= render 'favorites/unfavorite', movie: movie, index: index
 		- else 
 			= render 'favorites/favorite', movie: movie, index: index
 - else 
-	%div.col-xs-1{ id: "favorite-form#{index}"}
+	%div.col-xs-1.favorite-form{ id: "favorite-form#{index}"}
 		= render 'favorites/favorite_not_signed_in', movie: movie, index: index
