@@ -25,4 +25,3 @@ def secure_token
 end
 
 OmdbProject::Application.config.secret_key_base = secure_token
-
