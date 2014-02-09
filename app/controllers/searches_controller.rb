@@ -14,7 +14,7 @@ class SearchesController < ApplicationController
 			if(movie_from_db = Movie.find_by(imdb_id: movie['imdbID']))
 				@movies << movie_from_db
 			else
-				@movies << Movie.create!(json: movie.to_s, title: movie['Title'], year: movie['Year'], imdb_id: movie['imdbID'], type: movie['Type'])
+				@movies << Movie.create!(json: movie.to_s, title: movie['Title'], year: movie['Year'], imdb_id: movie['imdbID'], result_type: movie['Type'])
 			end
 		end
 

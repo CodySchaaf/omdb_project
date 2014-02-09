@@ -5,6 +5,6 @@ class Movie < ActiveRecord::Base
 	validates :json, presence: true, uniqueness: { case_sensitive: false }
 	validates :year, presence: true
 	validates :imdb_id, presence: true, uniqueness: { case_sensitive: false }
-	validates :type, presence: true
+	validates :result_type, presence: true
 	validates :title, presence: true, uniqueness: { scope: [:year] }
 end

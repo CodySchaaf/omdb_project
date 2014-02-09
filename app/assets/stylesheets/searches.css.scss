@@ -24,6 +24,7 @@ div#home {
 
 #movie {
 	background-color: $gray-lighter;
+	padding-left: 1px;
 	
 }
 
@@ -34,13 +35,15 @@ div#home {
 
 #movie-number {
 	border-right: 2px solid $gray;
-	padding-right: auto;
+	padding-right: 0px;
+	padding-left: 0px;
 	padding-top: 3px;
 	padding-bottom: 5px;
 	text-align: center;
 	// padding-bottom: 10px;
 	vertical-align: middle;
 	float: left;
+	width: 36px;
 }
 
 a {

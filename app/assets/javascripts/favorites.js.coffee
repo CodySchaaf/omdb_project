@@ -57,3 +57,12 @@ $ ->
 			$(this).toggleClass("glyphicon-ok-circle")
 			$(this).toggleClass("glyphicon-remove-circle")
 	, ".glyphicon-remove-circle"
+
+	$(".popover-buttons").popover
+		offset: 5
+		placement: "right"
+
+	# $('#popover-button').click ->
+	# 	$(this).popover('show')
+
+
