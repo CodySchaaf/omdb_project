@@ -7,7 +7,10 @@ gem 'rails', '4.0.2'
 gem 'bcrypt-ruby'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
+end
 
 gem 'typhoeus'
 
