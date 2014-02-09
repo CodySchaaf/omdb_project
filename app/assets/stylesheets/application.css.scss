@@ -12,9 +12,7 @@
  *= require_self
  *= require_tree .
  */
-
 @import "bootstrap";
-
 @import "bootstrap/theme";
 
 body {
@@ -28,10 +26,9 @@ body {
 }
 
 #main {
-  padding-top:100px;
+  padding-top: 100px;
   min-height: 100%;
 }
-
 
 /* Footer */
 
@@ -41,7 +38,7 @@ body {
   float: left;
   color: $gray-light;
   clear: both;
-} 
+}
 
 #nav-home {
   margin-right: 0px;
@@ -62,13 +59,13 @@ div#welcome-message {
   width: 100%;
   padding-left: auto;
   padding-right: auto;
-  p{
+  p {
     margin-top: -1px;
     position: absolute;
     display: inline;
     text-align: center;
-    margin-left: auto;  
-    margin-right: auto;  
+    margin-left: auto;
+    margin-right: auto;
     padding-left: auto;
     padding-right: auto;
     letter-spacing: -1px;

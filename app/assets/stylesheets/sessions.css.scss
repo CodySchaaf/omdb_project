@@ -2,20 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 form#sign-in {
 
-	div.form-group {
-		margin-top: -1em;
-	}
-	
-	input {
-		font-size: 12px;
-		margin-bottom: .5em;
-			#email {
-				padding-top: -2em;
+  div.form-group {
+    margin-top: -1em;
+  }
 
-		 }
+  input {
+    font-size: 12px;
+    margin-bottom: .5em;
+    #email {
+      padding-top: -2em;
 
-	}
+    }
+
+  }
 }

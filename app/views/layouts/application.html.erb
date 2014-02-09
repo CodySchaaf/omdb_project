@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Omdb Project" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Omdb Project" %>">
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-      <%= render 'layouts/messages' %>
-      <div class='container clear-top' id='main'>
-        <div id='wrap' >
-          <div class='col-xs-8 col-xs-offset-2' id='home'>
-            <%= yield %>
-          </div>
-        </div>
-        <%= render 'layouts/footer' %>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Omdb Project" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Omdb Project" %>">
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <%= render 'layouts/navigation' %>
+</header>
+<main role="main">
+  <%= render 'layouts/messages' %>
+  <div class='container clear-top' id='main'>
+    <div id='wrap'>
+      <div class='col-xs-8 col-xs-offset-2' id='home'>
+        <%= yield %>
       </div>
-    </main>
-  </body>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
+</main>
+</body>
 </html>

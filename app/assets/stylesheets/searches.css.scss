@@ -1,108 +1,133 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 @import "bootstrap";
-
 @import "bootstrap/theme";
 
 h1 {
-	font-size: 3em;
-	text-align: center;
-	letter-spacing: -2px;
-	line-height: 1;
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 1;
 }
 
 li {
 }
 
 div#home {
-	margin-top: 5em;
-	margin-bottom: 5em;
-	height: 100%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  height: 100%;
 }
 
 #movie {
-	background-color: $gray-lighter;
-	padding-left: 1px;
-	
+  background-color: $gray-lighter;
+  padding-left: 1px;
+
 }
 
-#movie-number, #movie-name{
-	float: none;  
-	display: table-cell;
+#movie-number, #movie-name {
+  float: none;
+  display: table-cell;
 }
 
 #movie-number {
-	border-right: 2px solid $gray;
-	padding-right: 0px;
-	padding-left: 0px;
-	padding-top: 3px;
-	padding-bottom: 5px;
-	text-align: center;
-	// padding-bottom: 10px;
-	vertical-align: middle;
-	float: left;
-	width: 36px;
+  border-right: 2px solid $gray;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  text-align: center;
+  // padding-bottom: 10px;
+  vertical-align: middle;
+  float: left;
+  width: 36px;
 }
 
 a {
-	&:hover {
-		text-decoration: none;
-		color: darkBlue;
-	}
+  &:hover {
+    text-decoration: none;
+    color: darkBlue;
+  }
 }
 
 #movie-name {
-	/* essential */
-	text-overflow: ellipsis;
-	width: 60%;
-	white-space: nowrap;
-	overflow: hidden;
-	display: inline-block;
-	vertical-align: middle;
-	/* for good looks */
-	text-align: center;
-	padding-top: 5px;
-	passing-left: 20px;
-	padding-bottom: 5px;
+  /* essential */
+  text-overflow: ellipsis;
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  /* for good looks */
+  text-align: center;
+  padding-top: 5px;
+  passing-left: 20px;
+  padding-bottom: 5px;
 }
 
 .glyphicon-remove-circle {
-	color: red;
+  color: red;
 }
 
 div[id*='favorite-form'] {
-	opacity: 1.0;
-	float: right;
-	// clear: right;
-	vertical-align: middle;
-	margin-top: 7px;
-	&:hover {
-		opacity: 0.5;
-	}
+  opacity: 1.0;
+  float: right;
+  // clear: right;
+  vertical-align: middle;
+  margin-top: 7px;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 body {
-	text-align: center;
-	height: 100%;
+  text-align: center;
+  height: 100%;
 
 }
 
 body > * {
-	text-align: left;
+  text-align: left;
 
 }
 
 form#home-page {
-	margin-top: 2em;
-	text-align: center;
-	input#small-btn {
-		margin-top: .25em;
-		text-align: center;
-	}
+  margin-top: 2em;
+  text-align: center;
+  input#small-btn {
+    margin-top: .25em;
+    text-align: center;
+  }
 }
 
 div#search-form {
-	margin-left: .25em;
+  margin-left: .25em;
+}
+
+div#popover-head {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popover-sign-up-form{
+  border-top: 1px $gray-lighter solid;
+  width: 100%;
+}
+
+div.separating-or-div {
+  border-top: 1px solid $gray-light;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-top: .75em;
+}
+
+span.separating-or-span {
+  background-color: white;
+  position: relative;
+  top: -.75em;
+  padding-right: 5px;
+  padding-left: 5px;
 }

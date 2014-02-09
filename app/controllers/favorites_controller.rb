@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
 	before_action :signed_in_user
 
-	def create 
+	def create
 		@movie = Movie.find(params[:favorite][:favorited_id])
 		@index = params[:index]
 		current_user.favorite!(@movie)

@@ -39,23 +39,23 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+	# bundle exec rake doc:rails generates the API under doc/api.
+	gem 'sdoc', require: false
 end
 
 gem 'bootstrap-sass', '~> 3.1.0'
 group :development do
-  gem 'rails_layout'
+	gem 'rails_layout'
 end
 
 group :development, :test do
-  gem 'irbtools-more', require: 'binding.repl'
+	gem 'irbtools-more', require: 'binding.repl'
 end
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
+	gem 'better_errors'
+	gem 'binding_of_caller'
+	gem 'meta_request'
 end
 
 # Use unicorn as the app server

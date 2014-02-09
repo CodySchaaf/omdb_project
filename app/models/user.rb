@@ -33,10 +33,10 @@ class User < ActiveRecord::Base
 	def unfavorite!(movie)
 		favorites.find_by(favorited_id: movie.id).destroy
 	end
-	
+
 	private
 
-		def create_remember_token
-			self.remember_token = User.encrypt(User.new_remember_token)
-		end
+	def create_remember_token
+		self.remember_token = User.encrypt(User.new_remember_token)
+	end
 end
