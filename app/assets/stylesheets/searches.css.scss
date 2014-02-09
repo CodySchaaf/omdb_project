@@ -117,17 +117,27 @@ div#popover-head {
 }
 
 div.separating-or-div {
-  border-top: 1px solid $gray-light;
+//  border-top: 1px solid $gray-light;
   text-align: center;
   width: 100%;
   display: inline-block;
-  margin-top: .75em;
+//  margin-top: .75em;
 }
 
 span.separating-or-span {
-  background-color: white;
+//  background-color: white;
   position: relative;
-  top: -.75em;
-  padding-right: 5px;
-  padding-left: 5px;
+//  top: -.75em;
+//  padding-right: 5px;
+//  padding-left: 5px;
+}
+
+span.separating-line-span {
+  background-color: black;
+  position: relative;
+  width: 40%;
+  top: -.25em;
+  height: 1px;
+  float: none;
+  display: inline-block;
 }

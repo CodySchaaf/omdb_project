@@ -13,39 +13,39 @@
 
 ActiveRecord::Schema.define(version: 20140206061924) do
 
-	create_table "favorites", force: true do |t|
-		t.integer "favoriter_id"
-		t.integer "favorited_id"
-		t.datetime "created_at"
-		t.datetime "updated_at"
-	end
+  create_table "favorites", force: true do |t|
+    t.integer  "favoriter_id"
+    t.integer  "favorited_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
-	add_index "favorites", ["favorited_id"], name: "index_favorites_on_favorited_id"
-	add_index "favorites", ["favoriter_id", "favorited_id"], name: "index_favorites_on_favoriter_id_and_favorited_id", unique: true
-	add_index "favorites", ["favoriter_id"], name: "index_favorites_on_favoriter_id"
+  add_index "favorites", ["favorited_id"], name: "index_favorites_on_favorited_id"
+  add_index "favorites", ["favoriter_id", "favorited_id"], name: "index_favorites_on_favoriter_id_and_favorited_id", unique: true
+  add_index "favorites", ["favoriter_id"], name: "index_favorites_on_favoriter_id"
 
-	create_table "movies", force: true do |t|
-		t.string "json"
-		t.string "title"
-		t.integer "year"
-		t.datetime "created_at"
-		t.datetime "updated_at"
-		t.string "imdb_id"
-		t.string "result_type"
-	end
+  create_table "movies", force: true do |t|
+    t.string   "json"
+    t.string   "title"
+    t.integer  "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "imdb_id"
+    t.string   "result_type"
+  end
 
-	add_index "movies", ["json"], name: "index_movies_on_json"
+  add_index "movies", ["json"], name: "index_movies_on_json"
 
-	create_table "users", force: true do |t|
-		t.string "user_name"
-		t.string "email"
-		t.string "password_digest"
-		t.string "remember_token"
-		t.datetime "created_at"
-		t.datetime "updated_at"
-	end
+  create_table "users", force: true do |t|
+    t.string   "user_name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "remember_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
-	add_index "users", ["email"], name: "index_users_on_email", unique: true
-	add_index "users", ["user_name"], name: "index_users_on_user_name", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["user_name"], name: "index_users_on_user_name", unique: true
 
 end

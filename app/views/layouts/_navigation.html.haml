@@ -23,13 +23,13 @@
             - if !signed_in?
               -#%li
                 -#= link_to 'Sign Up', signup_path
-              %li.divider
+              -#%li.divider
               -#%li
                 -#= link_to 'Sign In', signin_path
             - else
               %li
                 = link_to 'Sign Out', signout_path, method: 'delete'
-            %li.divider
+            -#%li.divider
             - if !signed_in?
               %li
                 = render 'sessions/signin_form'
