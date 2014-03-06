@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140206061924) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "favorites", force: true do |t|
     t.integer  "favoriter_id"
     t.integer  "favorited_id"
@@ -20,9 +23,9 @@ ActiveRecord::Schema.define(version: 20140206061924) do
     t.datetime "updated_at"
   end
 
-  add_index "favorites", ["favorited_id"], name: "index_favorites_on_favorited_id"
-  add_index "favorites", ["favoriter_id", "favorited_id"], name: "index_favorites_on_favoriter_id_and_favorited_id", unique: true
-  add_index "favorites", ["favoriter_id"], name: "index_favorites_on_favoriter_id"
+  add_index "favorites", ["favorited_id"], name: "index_favorites_on_favorited_id", using: :btree
+  add_index "favorites", ["favoriter_id", "favorited_id"], name: "index_favorites_on_favoriter_id_and_favorited_id", unique: true, using: :btree
+  add_index "favorites", ["favoriter_id"], name: "index_favorites_on_favoriter_id", using: :btree
 
   create_table "movies", force: true do |t|
     t.string   "json"
@@ -34,7 +37,7 @@ ActiveRecord::Schema.define(version: 20140206061924) do
     t.string   "result_type"
   end
 
-  add_index "movies", ["json"], name: "index_movies_on_json"
+  add_index "movies", ["json"], name: "index_movies_on_json", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "user_name"
@@ -45,7 +48,7 @@ ActiveRecord::Schema.define(version: 20140206061924) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["user_name"], name: "index_users_on_user_name", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["user_name"], name: "index_users_on_user_name", unique: true, using: :btree
 
 end

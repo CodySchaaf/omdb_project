@@ -1,16 +1,16 @@
-= form_for(user, id: :new_user) do |f|
+= form_for(user, id: :new_user, role: 'form') do |f|
 		= render 'shared/error_messages', object: f.object
+		.form-group
+				-#= f.label :user_name
+				= f.text_field :user_name, class: 'form-control', placeholder: 'User Name'
 
-		= f.label :user_name
-		= f.text_field :user_name
+				-#= f.label :email
+				= f.email_field :email, class: 'form-control', placeholder: 'Email'
 
-		= f.label :email
-		= f.email_field :email
+				-#= f.label :password
+				= f.password_field :password, class: 'form-control', placeholder: 'Password'
 
-		= f.label :password
-		= f.password_field :password
+				-#= f.label :password_confirmation, 'Confirm Password'
+				= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password Confirmation'
 
-		= f.label :password_confirmation, 'Confirm Password'
-		= f.password_field :password_confirmation
-
-		= f.submit label, class: 'btn btn-large btn-primary'
+				= f.submit label, class: 'btn btn-large btn-primary'

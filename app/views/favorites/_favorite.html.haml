@@ -1,5 +1,6 @@
-= form_for(current_user.favorites.build(favorited_id: movie.id), remote: true, id: "favorite_form") do |fav|
-	= fav.hidden_field :favorited_id
-	= hidden_field_tag :index, index
-	= link_to_submit( class: 'form-submitter' ) do 
-		%b.glyphicon.glyphicon-plus-sign
+.fly-glyph
+	= form_for(current_user.favorites.build(favorited_id: movie.id), class: 'glyph-box', remote: true, id: "favorite_form") do |fav|
+		= fav.hidden_field :favorited_id
+		= hidden_field_tag :index, index
+		= link_to_submit( class: 'form-submitter' ) do
+			%b.glyphicon.glyphicon-plus-sign

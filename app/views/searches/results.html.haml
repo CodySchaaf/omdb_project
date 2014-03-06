@@ -1,13 +1,14 @@
-%ul.list-group
-	- @movies.each_with_index do |movie, index|
-		- index += 1
-		%li.list-group-item#movie
-			.col-xs-1.col-xs-pull-1.col-sm-pull-0.text-center#movie-number
-				= "#{index}"
-			.text-center.col-xs-offset-1#movie-name
-				= render 'link', element: movie
-			= render 'glyph_form', movie: movie, index: index
+.container-fluid
+  - @movies.each_with_index do |movie, index|
+    - index += 1
+    .movie.row{class: (index == @movies.size ? 'bottom-movie' : 'inner-movie') + (' top-movie' if index == 1).to_s}
+      .col-xs-1.col-xs-pull-1.col-sm-pull-0.text-center.movie-number
+        .fly
+          = "#{index}"
+      .text-center.col-xs-offset-1.movie-name
+        = render 'link', element: movie
+      = render 'glyph_form', movie: movie, index: index
 #popover-head.hide Please sign in to save as favorite.
 #popover-content.hide
-	.popover-sign-in-form
-		= render 'sessions/signin_form', popover: true
+  .popover-sign-in-form
+    = render 'sessions/signin_form', popover: true

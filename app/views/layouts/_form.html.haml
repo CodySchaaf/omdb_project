@@ -1,6 +1,6 @@
 #navbar-form
-	= form_tag("/results", method: "get", class: 'navbar-form navbar-right', role: 'search') do |f|
+	= form_tag("/results", method: "get", class: 'form-inline navbar-form navbar-right', role: 'search') do |f|
 		.form-group
-			= text_field_tag :title, nil, placeholder: 'Search', id: 'nav-search'
+			= text_field_tag :title, nil, placeholder: 'Search', id: 'nav-search', class: 'form-control'
 
 			= submit_tag 'Submit', class: "btn btn-default btn-xs"
